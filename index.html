@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibrion Textiles - Technical Textile Solutions</title>
+    <meta name="description" content="Fibrion Textiles supplies high-performance technical textiles for the mining, agriculture, construction, and industrial sectors. Durable, reliable, and engineered to perform.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6735e83b36.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Custom Web Icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Fibrion_ico.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Fibrion_ico.ico">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Fibrion Textiles",
+      "description": "Fibrion Textiles supplies high-performance technical textiles for the mining, agriculture, construction, and industrial sectors.",
+      "url": "https://fibriontextiles.com/",
+      "logo": "https://fibriontextiles.com/images/logo.png",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "email": "admin@fibrion.com",
+        "telephone": "+27 76 154 1689",
+        "contactType": "customer service"
+      }],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "South Africa"
+      }
+    }
+    </script>
+</head>
+
+
+<body>
+
+    <!-- NAV BAR -->
+    <section id="title">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="index.html">
+                    <!-- Logo -->
+                    <img src="images/Fibrion Logo _ 200 x 50px.png" alt="Linco Textiles Logo">
+                </a>
+
+                <!-- Toggle Theme Button -->
+                <button id="theme-toggle" 
+                        class="btn btn-light mt-2 p-1 d-flex align-items-center justify-content-center" 
+                        style="width: 30px; height: 30px; border-radius: 50%;">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                </button>
+
+
+                <!-- Offcanvas Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- COLLAPSE NAVBAR -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            <!-- Logo -->
+                            <img src="images/Fibrion Logo _ 500 x 250px.png" alt="Linco Textiles Logo">
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <!-- OFFCANVAS BODY -->
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 350px;">
+
+                        <!-- HOME TAB -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html" title="Go to Home Page">Home</a>
+                        </li>
+
+                        <!-- Services TAB -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html" title="Explore Our Products">Products</a>
+                        </li>
+
+                        <!-- Gallery TAB -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html" title="See Our Completed Projects">Gallery</a>
+                        </li>
+
+                            <!-- Social Media Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="eventsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Social Media
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                                    <li><a class="dropdown-item" href="https://www.facebook.com">Facebook</a></li>
+                                    <li><a class="dropdown-item" href="https://x.com">X (Twitter)</a></li>
+                                    <li><a class="dropdown-item" href="https://www.instagram.com">Instagram</a></li>
+                                    <li><a class="dropdown-item" href="https://www.tiktok.com">TikTok</a></li>
+                                    <li><a class="dropdown-item" href="https://www.youtube.com">YouTube</a></li>
+                                    <li><a class="dropdown-item" href="https://www.linkedin.com">LinkedIn</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Contact Us TAB -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+
+                        <!-- Navbar Flags -->
+                        <div class="flag-container">
+                            <img src="images/ItalianFlag.png" alt="Flag 1" class="flag-icon">
+                            <img src="images/SouthAfricanFlag.jpg" alt="Flag 2" class="flag-icon">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="hero" class="text-center py-5">
+        <div class="container">
+            <img src="images/Fibrion Video _ mp4.gif" alt="Fibrion Textiles Logo" class="logo">
+            <h1 class="display-4">Engineering High-Performance Technical Textiles</h1>
+            <p class="lead font-weight-bold">
+                Serving the mining, agriculture, construction, and industrial sectors with durable, reliable, and innovative textile solutions.
+            </p>
+            <a href="contact.html" class="btn btn-light btn-lg mt-3">Get in Touch</a>
+        </div>
+    </section>
+
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="row">
+                
+                <!-- Feature 1 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-industry fa-4x mb-3" style="color: #00ffef;"></i>
+                        <h3>Expert Team</h3>
+                        <p>Our highly skilled professionals bring decades of experience, ensuring top-quality textiles and reliable service on every project.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-certificate fa-4x mb-3" style="color: #00ffef;"></i>
+                        <h3>Advanced Manufacturing</h3>
+                        <p>We use state-of-the-art technology and rigorous quality checks to produce fabrics that meet the highest international standards.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-lightbulb fa-4x mb-3" style="color: #00ffef;"></i>
+                        <h3>Customized Solutions</h3>
+                        <p>We work closely with clients to design and deliver textile solutions tailored to specific requirements, industries, and applications.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <p class="card-text">
+            Serving the mining, agriculture, construction, and geotextile industries, 
+            Fibrion engineers high-performance technical textiles designed for strength, safety, and efficiency. 
+            Our versatile manufacturing capabilities allow us to develop both industry-standard and custom fabrics at scale. 
+            From industrial reinforcement to advanced protective materials, we deliver consistent, high-quality results worldwide.
+            </p>
+
+            <h2 class="text-center mb-5">Products</h2>
+            <div class="row">
+                <!-- Polyester -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                        <img src="images/Fibers/polyester.jpg" class="card-img-top" alt="Polyester Textiles">
+                        <div class="card-body">
+                            <h5 class="card-title">Polyester (PET)</h5>
+                            <p class="card-text">High tensile strength, UV and abrasion resistant, stable under load. Used in clothing, geotextiles, conveyor belts.</p>
+                            <a href="services.html#polyester" class="btn btn-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Polypropylene -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                        <img src="images/Fibers/polypropylene.jpg" class="card-img-top" alt="Polypropylene Textiles">
+                        <div class="card-body">
+                            <h5 class="card-title">Polypropylene (PP)</h5>
+                            <p class="card-text">Lightweight, flexible, moisture and chemical resistant. Used in crop covers, packaging, and protective wraps.</p>
+                            <a href="services.html#polypropylene" class="btn btn-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fiberglass -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                        <img src="images/Fibers/fiberglass.jpg" class="card-img-top" alt="Fiberglass Textiles">
+                        <div class="card-body">
+                            <h5 class="card-title">Fiberglass (E-glass)</h5>
+                            <p class="card-text">High heat resistance, non-conductive, corrosion-proof. Used in insulation, roofing membranes, and fire barriers.</p>
+                            <a href="services.html#fiberglass" class="btn btn-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRP -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                        <img src="images/Fibers/grp.jpg" class="card-img-top" alt="Glass Fiber Reinforced Plastic">
+                        <div class="card-body">
+                            <h5 class="card-title">Glass Fiber Reinforced Plastic (GRP)</h5>
+                            <p class="card-text">Strong yet lightweight, corrosion resistant, formable. Used in panels, piping, tanks, and enclosures.</p>
+                            <a href="services.html#grp" class="btn btn-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cementitious Fabrics -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                        <img src="images/Fibers/cementitious.jpg" class="card-img-top" alt="Cementitious Fabrics">
+                        <div class="card-body">
+                            <h5 class="card-title">Cementitious Fabrics (CC/GCCM)</h5>
+                            <p class="card-text">Fabric embedded with dry cement. Sets on water contact to form a durable thin concrete layer.</p>
+                            <a href="services.html#cementitious" class="btn btn-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Geotextiles -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                        <img src="images/Fibers/geotextiles.jpg" class="card-img-top" alt="Geotextiles">
+                        <div class="card-body">
+                            <h5 class="card-title">Geotextiles (GTX)</h5>
+                            <p class="card-text">Heavy-duty fabrics for soil stabilization, erosion control, and road/dam construction layers.</p>
+                            <a href="services.html#geotextiles" class="btn btn-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Key Products</h2>
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <!-- Product 1: Polyester -->
+                    <div class="carousel-item active">
+                    <div class="text-center">
+                        <img src="images/Fibers/polyester.jpg" class="d-block mx-auto mb-3" alt="Polyester (PES)" style="max-height:200px;">
+                        <h5>Polyester (PES)</h5>
+                        <p>High tensile strength, good dimensional stability, resistant to moisture, UV, and most chemicals.</p>
+                    </div>
+                    </div>
+
+                    <!-- Product 2: Polypropylene -->
+                    <div class="carousel-item">
+                    <div class="text-center">
+                        <img src="images/Fibers/polypropylene.jpg" class="d-block mx-auto mb-3" alt="Polypropylene (PP)" style="max-height:200px;">
+                        <h5>Polypropylene (PP)</h5>
+                        <p>Lightweight, hydrophobic, chemically inert, low thermal conductivity, and cost-effective.</p>
+                    </div>
+                    </div>
+
+                    <!-- Product 3: Polyamide -->
+                    <div class="carousel-item">
+                    <div class="text-center">
+                        <img src="images/Fibers/nylon.jpg" class="d-block mx-auto mb-3" alt="Polyamide (Nylon)" style="max-height:200px;">
+                        <h5>Polyamide (Nylon)</h5>
+                        <p>Very strong, high abrasion resistance, flexible, and moderately moisture-absorbent.</p>
+                    </div>
+                    </div>
+
+                    <!-- Product 4: Aramid -->
+                    <div class="carousel-item">
+                    <div class="text-center">
+                        <img src="images/Fibers/aramid.jpg" class="d-block mx-auto mb-3" alt="Aramid (Kevlar, Nomex)" style="max-height:200px;">
+                        <h5>Aramid (Kevlar®, Nomex®)</h5>
+                        <p>Exceptional tensile strength-to-weight ratio, flame-resistant, thermally stable, and abrasion-resistant.</p>
+                    </div>
+                    </div>
+
+                    <!-- Product 5: Glass Fiber -->
+                    <div class="carousel-item">
+                    <div class="text-center">
+                        <img src="images/Fibers/glassfiber.jpg" class="d-block mx-auto mb-3" alt="Glass Fiber" style="max-height:200px;">
+                        <h5>Glass Fiber</h5>
+                        <p>High tensile strength, non-flammable, dimensionally stable, with good thermal and electrical insulation.</p>
+                    </div>
+                    </div>
+
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Call to Action -->
+    <section id="cta" class="text-center py-5">
+        <div class="container">
+            <h4>Contact Us</h4>
+            <p>
+                <a href="mailto:lucahpaoli@fibrion.com">lucahpaoli@fibrion.com</a><br>
+                <a href="mailto:ninopaoli@fibrion.com">ninopaoli@fibrion.com</a><br>
+                <a href="mailto:admin@fibrion.com">admin@fibrion.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-4">
+        <div class="container">
+            <div class="row">
+
+                <!-- Company Info -->
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p>Fibrion Textiles</p>
+                    <p>
+                        <a href="mailto:lucahpaoli@fibrion.com" class="text-light">lucahpaoli@fibrion.com</a> |
+                        <a href="mailto:ninopaoli@fibrion.com" class="text-light">ninopaoli@fibrion.com</a> |
+                        <a href="mailto:admin@fibrion.com" class="text-light">admin@fibrion.com</a>
+                    </p>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-md-6">
+                    <div class="social-icons mb-2">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <p class="mb-0">&copy; 2025 Fibrion Textiles. All rights reserved.</p>
+                    <p class="small">Website designed by Niël Slabbert</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function toggleTheme() {
+                document.body.classList.toggle('light-mode');
+                
+                // Update localStorage with the new theme preference
+                if (document.body.classList.contains('light-mode')) {
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    localStorage.setItem('theme', 'dark');
+                }
+            }
+    
+            // Check local storage for theme preference on page load
+            if (localStorage.getItem('theme') === 'light') {
+                document.body.classList.add('light-mode');
+            } else {
+                document.body.classList.remove('light-mode');
+            }
+    
+            // Add event listener to the theme toggle button
+            document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+        });
+    </script>
+
+</body>
+</html>
