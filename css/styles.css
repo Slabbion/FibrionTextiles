@@ -12,13 +12,13 @@
 
     --bg-color-light: #ffffff;
     --text-color-light: #333333;
-    --accent-color-light: #00cfc4; /* softer aqua for light mode */
-    --secondary-bg-light: #f0f0f0;
+    --accent-color-light: #b3b3b3; /* light mode color before hover color*/
+    --secondary-bg-light: #f0f0f0; /* light mode text color before hover color*/
     --border-color-light: #ddd;
     --placeholder-color-light: #757575;
 
-    --hover-color-dark: #00d6cc; /* hover tint for dark theme */
-    --hover-color-light: #00aaa1; /* hover tint for light theme */
+    --hover-color-dark: #b3b3b3; /* hover tint for dark theme */
+    --hover-color-light: #00ffef; /* hover tint for light theme */
 }
 
 [data-theme="dark"] {

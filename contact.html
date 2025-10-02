@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Linco Textiles</title>
-    <meta name="description" content="Linco Textiles: Your go-to for professional installation services across residential and commercial projects.">
+    <title>Contact - Fibrion Textiles</title>
+    <meta name="description" content="Fibrion Textiles: Your go-to for professional installation services across residential and commercial projects.">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -19,6 +19,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
+    <!-- JS -->
+    <script src="js/site-main.js" defer></script>
+
     <!-- Custom Web Icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/Fibrion_ico.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Fibrion_ico.ico">
@@ -29,9 +32,9 @@
         {
           "@context": "https://schema.org",
           "@type": "ContactPage",
-          "name": "Contact - Linco Textiles",
-          "description": "Get in touch with Linco Textiles for inquiries about professional installation services.",
-          "url": "https://primoinstallations.com/contact.html",
+          "name": "Contact - Fibrion Textiles",
+          "description": "Get in touch with Fibrion Textiles for inquiries about professional installation services.",
+          "url": "https://",
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+27 76 154 1689",
@@ -53,7 +56,7 @@
 
                 <a class="navbar-brand" href="index.html">
                     <!-- Logo -->
-                    <img src="images/Fibrion Logo _ 200 x 50px.png" alt="Linco Textiles Logo">
+                    <img src="images/Fibrion Logo _ 200 x 50px.png" alt="Fibrion Textiles Logo">
                 </a>
 
                 <!-- Toggle Theme Button -->
@@ -74,7 +77,7 @@
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
                             <!-- Logo -->
-                            <img src="images/Fibrion Logo _ 500 x 250px.png" alt="Linco Textiles Logo">
+                            <img src="images/Fibrion Logo _ 500 x 250px.png" alt="Fibrion Textiles Logo">
                         </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -155,130 +158,198 @@
     </style>
 
 
-        <!-- Contact Form Section -->
-        <div class="contact-form">
-            <div class="container">
-                <h2 class="text-center mb-4">Customer Registration Form</h2>
-                <!-- Form Content -->
-                <form id="orderForm" method="post" action="process_form.php">
-    
-                    <!-- Purpose for Contacting -->
-                    <div class="form-group col-md-6 mb-3">
-                        <label for="Purpose" class="form-label">Purpose of Inquiry</label>
-                        <select class="form-control" id="Purpose" name="Purpose" required>
-                            <option value="">Select Purpose</option>
-                            <option value="consultation">Consultation</option>
-                            <option value="existing">Existing Standard Products</option>
-                            <option value="maintenance">Incuation and Custom Products</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-    
-                    <!-- Where did you hear about us? -->
-                    <div class="form-group col-md-6 mb-3">
-                        <label for="howHeard" class="form-label">Where did you hear about us?*</label>
-                        <select class="form-control" id="howHeard" name="howHeard" required>
-                            <option value="">Please Select</option>
-                            <option value="friend">Friend</option>
-                            <option value="internet">Internet</option>
-                            <option value="social_media">Social Media</option>
-                            <option value="advertisement">Advertisement</option>
-                        </select>
-                        
-                    </div>
-    
-                    <!-- Name Section -->
-                    <div class="row">
-                        <div class="form-group col-md-6 mb-3">
-                            <label for="companyName" class="form-label">Company Name</label>
-                            <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company name" required>
-                        </div>
-    
-                        <!-- Email Section -->
-                        <div class="form-group col-md-6 mb-3">
-                            <label for="email" class="form-label">Email*</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com" required>
-                        </div>
-                    </div>
-    
-                    <!-- Address Section -->
-                    <div class="form-group mb-3">
-                        <label for="address" class="form-label">Address*</label>
-                        <input type="text" class="form-control" id="address" name="address" placeholder="Street Address" required>
-                        <input type="text" class="form-control mt-2" id="addressLine2" name="addressLine2" placeholder="Street Address Line 2">
-                    </div>
-    
-                    <div class="form-group row">
-                        <div class="form-group col-md-4 mb-3">
-                            <input type="text" class="form-control" id="city" name="city" placeholder="Sandton">
-                        </div>
-                        <div class="form-group col-md-4 mb-3">
-                            <input type="text" class="form-control" id="state" name="state" placeholder="State / Province">
-                        </div>
-                        <div class="form-group col-md-4 mb-3">
-                            <label for="phone" class="form-label">Phone Number*</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="(+27)0 000-0000" required>
-                        </div>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="Inquiry" class="form-label">Please provide a brief description of your requirements:</label>
-                        <textarea class="form-control" id="Inquiry" name="Inquiry" rows="4" placeholder="Detailed description here" required></textarea>
-                    </div>
-    
-                    <!-- Form Check Section -->
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="billingSame" onchange="toggleCompanyDetails()">
-                        <label class="form-check-label" for="billingSame">
-                            <span class="fw-bold">Will the billing invoice be made out to the above mentioned name and surname?</span>
-                            <span class="d-block">✓ Yourself (tick)</span>
-                            <span class="d-block">✗ Other Company (untick)</span>
-                        </label>
-                    </div>
-                    
-                    <!-- Other Details Section -->
-                    <div class="mb-3" id="companyDetails" style="display:none;">
-                        <h4>If NO, please provide company details below:</h4>
-                        <div class="mb-2">
-                            <label for="orgName" class="form-label">Company Name</label>
-                            <input type="text" class="form-control" id="orgName" name="orgName" placeholder="Full Organizational name">
-                        </div>
-                        <div class="mb-2">
-                            <label for="orgContact" class="form-label">Contact Number</label>
-                            <input type="text" class="form-control" id="orgContact" name="orgContact" placeholder="(+27)0 000 0000">
-                        </div>
-                        <div class="mb-2">
-                            <label for="orgPhone" class="form-label">Vat / Reg Nr</label>
-                            <input type="tel" class="form-control" id="orgPhone" name="orgPhone" placeholder="0000 0000">
-                        </div>
-                        <div class="mb-2">
-                            <label for="orgEmail" class="form-label">Other Email</label>
-                            <input type="email" class="form-control" id="orgEmail" name="orgEmail" placeholder="example@example.com">
-                        </div>
-                    </div>
+<!-- ============================
+     Customer Registration Form
+     (Accessible, validated, async-post with fallback)
+     ============================ -->
 
-                    <button type="submit" class="btn btn-light">Submit</button>
-                    
-                    
-                </form>
+<section class="contact-form py-5" id="contact">
+  <div class="container">
+    <h2 class="text-center mb-4">Customer Registration Form</h2>
+
+    <!-- Form wrapper -->
+    <div class="card p-4 shadow-sm" role="region" aria-labelledby="contactHeading">
+      <form id="orderForm" method="post" action="process_form.php" novalidate>
+        <!-- ARIA live region for messages -->
+        <div id="formAlert" class="mb-3" aria-live="polite" style="min-height:28px;"></div>
+
+        <div class="row gx-3">
+          <!-- Purpose -->
+          <div class="col-md-6 mb-3">
+            <label for="Purpose" class="form-label">Purpose of Inquiry <span class="text-danger">*</span></label>
+            <select class="form-select" id="Purpose" name="Purpose" required aria-required="true">
+              <option value="">Select purpose</option>
+              <option value="consultation">Consultation</option>
+              <option value="existing">Existing Standard Products</option>
+              <option value="incubation">Incubation and Custom Products</option>
+              <option value="other">Other</option>
+            </select>
+            <div class="invalid-feedback">Please select a purpose for your inquiry.</div>
+          </div>
+
+          <!-- How did you hear -->
+          <div class="col-md-6 mb-3">
+            <label for="howHeard" class="form-label">Where did you hear about us? <span class="text-danger">*</span></label>
+            <select class="form-select" id="howHeard" name="howHeard" required aria-required="true">
+              <option value="">Please select</option>
+              <option value="friend">Friend</option>
+              <option value="internet">Internet</option>
+              <option value="social_media">Social Media</option>
+              <option value="advertisement">Advertisement</option>
+            </select>
+            <div class="invalid-feedback">Tell us where you heard about us.</div>
+          </div>
+
+          <!-- Company & Email -->
+          <div class="col-md-6 mb-3">
+            <label for="companyName" class="form-label">Company / Full Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company or full name" required>
+            <div class="invalid-feedback">Please provide a company name or your full name.</div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+
+          <!-- Address -->
+          <div class="col-12 mb-3">
+            <label for="address" class="form-label">Address <span class="text-danger">*</span></label>
+            <input type="text" class="form-control mb-2" id="address" name="address" placeholder="Street address" required>
+            <input type="text" class="form-control" id="addressLine2" name="addressLine2" placeholder="Street address line 2 (optional)">
+            <div class="invalid-feedback">Please enter an address.</div>
+          </div>
+
+          <!-- City / State / Phone -->
+          <div class="col-md-4 mb-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="Sandton">
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="state" class="form-label">State / Province</label>
+            <input type="text" class="form-control" id="state" name="state" placeholder="Gauteng">
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="+27 10 000 0000" required pattern="^\+?[0-9\-\s\(\)]{7,}$" aria-describedby="phoneHelp">
+            <div id="phoneHelp" class="form-text">Include country code (e.g. +27).</div>
+            <div class="invalid-feedback">Please enter a valid phone number (include country code).</div>
+          </div>
+
+          <!-- Inquiry -->
+          <div class="col-12 mb-3">
+            <label for="Inquiry" class="form-label">Please provide a brief description of your requirements <span class="text-danger">*</span></label>
+            <textarea class="form-control" id="Inquiry" name="Inquiry" rows="5" placeholder="Detailed description here" required></textarea>
+            <div class="invalid-feedback">Tell us a little about your needs so we can prepare.</div>
+          </div>
+
+          <!-- Billing checkbox -->
+          <div class="col-12 mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="billingSame" name="billingSame" checked>
+              <label class="form-check-label" for="billingSame">
+                Billing invoice will be made out to the same name above (tick). <span class="text-muted d-block small">If billing is to another company, untick and provide details below.</span>
+              </label>
             </div>
+          </div>
+
+          <!-- Company details (conditional) -->
+          <div class="col-12 mb-3" id="companyDetails" style="display:none;" aria-hidden="true">
+            <h5 class="mb-2">Billing Company Details</h5>
+
+            <div class="row gx-2">
+              <div class="col-md-6 mb-2">
+                <label for="orgName" class="form-label">Company Name</label>
+                <input type="text" class="form-control" id="orgName" name="orgName" placeholder="Full organizational name">
+              </div>
+
+              <div class="col-md-6 mb-2">
+                <label for="orgContact" class="form-label">Contact Number</label>
+                <input type="tel" class="form-control" id="orgContact" name="orgContact" placeholder="+27 10 000 0000">
+              </div>
+
+              <div class="col-md-6 mb-2">
+                <label for="orgVat" class="form-label">VAT / Reg Nr</label>
+                <input type="text" class="form-control" id="orgVat" name="orgVat" placeholder="0000 0000">
+              </div>
+
+              <div class="col-md-6 mb-2">
+                <label for="orgEmail" class="form-label">Other Email</label>
+                <input type="email" class="form-control" id="orgEmail" name="orgEmail" placeholder="billing@example.com">
+              </div>
+            </div>
+          </div>
+
+          <!-- Honeypot (anti-spam) - hidden from users -->
+          <div style="display:none;">
+            <label>Leave this field blank</label>
+            <input type="text" name="website_hp" id="website_hp" autocomplete="off" tabindex="-1" />
+          </div>
+
+          <!-- Submit -->
+          <div class="col-12 mt-2 d-flex gap-2 align-items-center">
+            <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
+            <button type="button" id="clearBtn" class="btn btn-outline-secondary">Clear</button>
+            <div id="formSpinner" class="spinner-border spinner-border-sm text-primary" role="status" style="display:none;" aria-hidden="true"></div>
+          </div>
+
         </div>
-    
-        <script>
-            // Function to toggle the display of company details
-            function toggleCompanyDetails() {
-                const companyDetails = document.getElementById('companyDetails');
-                companyDetails.style.display = document.getElementById('billingSame').checked ? 'none' : 'block';
-            }
-        
-            // Initialize state and add event listener on page load
-            document.addEventListener('DOMContentLoaded', () => {
-                // Ensure the initial state matches the checkbox value
-                toggleCompanyDetails();
-        
-                // Add change event listener to the checkbox
-                document.getElementById('billingSame').addEventListener('change', toggleCompanyDetails);
-            });
-        </script>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Minimal inline script — only what is required to make the billing toggle work reliably -->
+<script>
+  (function () {
+    function initBillingToggle() {
+      var checkbox = document.getElementById('billingSame');
+      var companyDetails = document.getElementById('companyDetails');
+      if (!checkbox || !companyDetails) return;
+
+      function applyState() {
+        var show = !checkbox.checked;
+        companyDetails.style.display = show ? 'block' : 'none';
+        companyDetails.setAttribute('aria-hidden', (!show).toString());
+        if (!show) {
+          // clear inputs inside when hiding to avoid accidental submission
+          var inputs = companyDetails.querySelectorAll('input, textarea, select');
+          for (var i = 0; i < inputs.length; i++) inputs[i].value = '';
+        }
+      }
+
+      // init state now (in case script loads after DOM)
+      applyState();
+
+      // attach listener (idempotent)
+      checkbox.addEventListener('change', applyState);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initBillingToggle);
+    } else {
+      initBillingToggle();
+    }
+  })();
+</script>
+
+<!-- Optional small inline CSS for form-specific tweaks -->
+<style>
+  /* keep form card visually consistent with your theme variables */
+  .contact-form .card { background: var(--secondary-bg-dark); color: var(--text-color-dark); border: 1px solid var(--border-color-dark); }
+  body.light-mode .contact-form .card { background: var(--secondary-bg-light); color: var(--text-color-light); border: 1px solid var(--border-color-light); }
+  #formAlert .alert { margin-bottom: 0; }
+  /* smaller controls on mobile */
+  @media (max-width: 576px) {
+    .contact-form .card { padding: 1rem; }
+  }
+</style>
+
+
+
 
     <!-- Contact Information -->
     <section id="contact-info" class="py-5">
