@@ -56,20 +56,14 @@
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
 
+                <!-- Logo (left) -->
                 <a class="navbar-brand" href="index.html">
-                    <!-- Logo -->
                     <img src="images/Fibrion Logo _ 200 x 50px.png" alt="Fibrion Textiles Logo">
                 </a>
 
-                <!-- Toggle Theme Button -->
-                <button id="theme-toggle" 
-                        class="btn btn-light mt-2 p-1 d-flex align-items-center justify-content-center" 
-                        style="width: 30px; height: 30px; border-radius: 50%;">
-                    <i id="theme-icon" class="fas fa-moon"></i>
-                </button>
+                
 
-
-                <!-- Offcanvas Toggler -->
+                <!-- Offcanvas Toggler (right) -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -78,7 +72,6 @@
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                            <!-- Logo -->
                             <img src="images/Fibrion Logo _ 500 x 250px.png" alt="Fibrion Textiles Logo">
                         </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -88,20 +81,20 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 350px;">
 
-                        <!-- HOME TAB -->
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html" title="Go to Home Page">Home</a>
-                        </li>
+                            <!-- HOME TAB -->
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html" title="Go to Home Page">Home</a>
+                            </li>
 
-                        <!-- Services TAB -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="products.html" title="Explore Our Products">Products</a>
-                        </li>
+                            <!-- Products TAB -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="products.html" title="Explore Our Products">Products</a>
+                            </li>
 
-                        <!-- Gallery TAB -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="gallery.html" title="See Our Completed Projects">Gallery</a>
-                        </li>
+                            <!-- Gallery TAB -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="gallery.html" title="See Our Completed Projects">Gallery</a>
+                            </li>
 
                             <!-- Social Media Dropdown -->
                             <li class="nav-item dropdown">
@@ -124,11 +117,18 @@
                             </li>
                         </ul>
 
-                        <!-- Navbar Flags -->
-                        <div class="flag-container">
-                            <img src="images/ItalianFlag.png" alt="Flag 1" class="flag-icon">
-                            <img src="images/SouthAfricanFlag.jpg" alt="Flag 2" class="flag-icon">
+                        <!-- Flags (center) -->
+                        <div class="mx-auto d-flex align-items-center">
+                            <img src="images/ItalianFlag.png" alt="Flag 1" class="flag-icon mx-1">
+                            <img src="images/SouthAfricanFlag.jpg" alt="Flag 2" class="flag-icon mx-1">
                         </div>
+
+                        <!-- Toggle Theme Button -->
+                        <button id="theme-toggle" 
+                                class="btn btn-light mt-2 p-1 d-flex align-items-center justify-content-center" 
+                                style="width: 30px; height: 30px; border-radius: 50%;">
+                            <i id="theme-icon" class="fas fa-moon"></i>
+                        </button>
 
                     </div>
                 </div>
@@ -136,11 +136,12 @@
         </nav>
     </section>
 
+
     <!-- Hero Section -->
     <section id="hero" class="text-center py-5">
         <div class="container">
-            <img src="images/Fibrion Video _ mp4.gif" alt="Fibrion Textiles Logo" class="logo">
-            <h1 class="display-4">Engineering High-Performance Technical Textiles</h1>
+            <img src="images/Fibrion Video _ mp4.gif" alt="Fibrion Textiles Logo" width="1200">
+            <h1 class="display-4 py-5">Engineering High-Performance Technical Textiles</h1>
             <p class="lead font-weight-bold">
                 Serving the mining, agriculture, construction, and industrial sectors with durable, reliable, and innovative textile solutions.
             </p>
@@ -148,6 +149,56 @@
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Industries We Serve</h2>
+            <p class="card-text text-center mb-5">
+                Serving the mining, agriculture, construction, and geotextile industries, 
+                Fibrion engineers high-performance technical textiles designed for strength, safety, and efficiency. 
+                Our versatile manufacturing capabilities allow us to develop both industry-standard and custom fabrics at scale. 
+                From industrial reinforcement to advanced protective materials, we deliver consistent, high-quality results worldwide.
+            </p>
+
+            <div class="row">
+                <!-- Mining -->
+                <div class="col-md-3 mb-4">
+                    <div class="feature-box h-100 p-3 border rounded shadow-sm bg-gradient bg-opacity-10 text-center">
+                        <img src="images/Industries/mining.png" class="card-img-top mb-3" alt="Mining Industry">
+                        <h5 class="card-title">Mining</h5>
+                        <p class="card-text">Durable fabrics for reinforcement, safety, and demanding mining operations.</p>
+                    </div>
+                </div>
+
+                <!-- Agriculture -->
+                <div class="col-md-3 mb-4">
+                    <div class="feature-box h-100 p-3 border rounded shadow-sm bg-gradient bg-opacity-10 text-center">
+                        <img src="images/Industries/agriculture.png" class="card-img-top mb-3" alt="Agriculture Industry">
+                        <h5 class="card-title">Agriculture</h5>
+                        <p class="card-text">Protective and moisture-resistant textiles for sustainable farming applications.</p>
+                    </div>
+                </div>
+
+                <!-- Construction -->
+                <div class="col-md-3 mb-4">
+                    <div class="feature-box h-100 p-3 border rounded shadow-sm bg-gradient bg-opacity-10 text-center">
+                        <img src="images/Industries/construction.png" class="card-img-top mb-3" alt="Construction Industry">
+                        <h5 class="card-title">Construction</h5>
+                        <p class="card-text">Reinforcement and safety fabrics for building, roofing, and infrastructure projects.</p>
+                    </div>
+                </div>
+
+                <!-- Geotextiles -->
+                <div class="col-md-3 mb-4">
+                    <div class="feature-box h-100 p-3 border rounded shadow-sm bg-gradient bg-opacity-10 text-center">
+                        <img src="images/Industries/geotextiles.png" class="card-img-top mb-3" alt="Geotextiles Industry">
+                        <h5 class="card-title">Geotextiles</h5>
+                        <p class="card-text">Heavy-duty geotextiles for soil stabilization, erosion control, and infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Features Section -->
     <section id="features" class="py-5">
@@ -182,95 +233,6 @@
                 </div>
 
 
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Services Section -->
-    <section id="services" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Our Services</h2>
-            <p class="card-text">
-            Serving the mining, agriculture, construction, and geotextile industries, 
-            Fibrion engineers high-performance technical textiles designed for strength, safety, and efficiency. 
-            Our versatile manufacturing capabilities allow us to develop both industry-standard and custom fabrics at scale. 
-            From industrial reinforcement to advanced protective materials, we deliver consistent, high-quality results worldwide.
-            </p>
-
-            <h2 class="text-center mb-5">Products</h2>
-            <div class="row">
-                <!-- Polyester -->
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
-                        <img src="images/Fibers/polyester.jpg" class="card-img-top" alt="Polyester Textiles">
-                        <div class="card-body">
-                            <h5 class="card-title">Polyester (PET)</h5>
-                            <p class="card-text">High tensile strength, UV and abrasion resistant, stable under load. Used in clothing, geotextiles, conveyor belts.</p>
-                            <a href="services.html#polyester" class="btn btn-light">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Polypropylene -->
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
-                        <img src="images/Fibers/polypropylene.jpg" class="card-img-top" alt="Polypropylene Textiles">
-                        <div class="card-body">
-                            <h5 class="card-title">Polypropylene (PP)</h5>
-                            <p class="card-text">Lightweight, flexible, moisture and chemical resistant. Used in crop covers, packaging, and protective wraps.</p>
-                            <a href="services.html#polypropylene" class="btn btn-light">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fiberglass -->
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
-                        <img src="images/Fibers/fiberglass.jpg" class="card-img-top" alt="Fiberglass Textiles">
-                        <div class="card-body">
-                            <h5 class="card-title">Fiberglass (E-glass)</h5>
-                            <p class="card-text">High heat resistance, non-conductive, corrosion-proof. Used in insulation, roofing membranes, and fire barriers.</p>
-                            <a href="services.html#fiberglass" class="btn btn-light">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- GRP -->
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
-                        <img src="images/Fibers/grp.jpg" class="card-img-top" alt="Glass Fiber Reinforced Plastic">
-                        <div class="card-body">
-                            <h5 class="card-title">Glass Fiber Reinforced Plastic (GRP)</h5>
-                            <p class="card-text">Strong yet lightweight, corrosion resistant, formable. Used in panels, piping, tanks, and enclosures.</p>
-                            <a href="services.html#grp" class="btn btn-light">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cementitious Fabrics -->
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
-                        <img src="images/Fibers/cementitious.jpg" class="card-img-top" alt="Cementitious Fabrics">
-                        <div class="card-body">
-                            <h5 class="card-title">Cementitious Fabrics (CC/GCCM)</h5>
-                            <p class="card-text">Fabric embedded with dry cement. Sets on water contact to form a durable thin concrete layer.</p>
-                            <a href="services.html#cementitious" class="btn btn-light">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Geotextiles -->
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
-                        <img src="images/Fibers/geotextiles.jpg" class="card-img-top" alt="Geotextiles">
-                        <div class="card-body">
-                            <h5 class="card-title">Geotextiles (GTX)</h5>
-                            <p class="card-text">Heavy-duty fabrics for soil stabilization, erosion control, and road/dam construction layers.</p>
-                            <a href="services.html#geotextiles" class="btn btn-light">Learn More</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -345,14 +307,15 @@
 
 
     <!-- Call to Action -->
-    <section id="cta" class="text-center py-5">
+    <section id="cta" class="py-5">
         <div class="container">
-            <h2>Quality Fabrics, Crafted for You</h2>
-            <p>Discover premium textiles designed to inspire creativity and bring sophistication to every project.</p>
-            <h4>Contact Us</h4>
-            <p>
-                <a href="mailto:admin@fibrion.com">admin@fibrion.com</a>
-            </p>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2>Quality Fabrics, Crafted for You</h2>
+                    <p>Discover premium textiles designed to inspire creativity and bring sophistication to every project.</p>
+                    <a href="contact.html" class="btn btn-light btn-lg">Contact Us</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -365,8 +328,6 @@
                 <div class="col-md-6 mb-3 mb-md-0">
                     <p>Fibrion Textiles</p>
                     <p>
-                        <a href="mailto:lucahpaoli@fibrion.com" class="text-light">lucahpaoli@fibrion.com</a> |
-                        <a href="mailto:ninopaoli@fibrion.com" class="text-light">ninopaoli@fibrion.com</a> |
                         <a href="mailto:admin@fibrion.com" class="text-light">admin@fibrion.com</a>
                     </p>
                 </div>
