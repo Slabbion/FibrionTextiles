@@ -3,7 +3,7 @@
 // Basic secure form handler: validates, sanitizes, sends email, returns JSON for AJAX.
 
 // --------------- CONFIG ---------------
-$recipient = 'you@yourdomain.com'; // <- CHANGE THIS to your preferred recipient
+$recipient = 'admin@fibriontextiles.com'; // <- CHANGE THIS to your preferred recipient
 $siteName  = 'Fibrion Textiles';
 $subjectPrefix = "Website Enquiry - {$siteName}";
 
