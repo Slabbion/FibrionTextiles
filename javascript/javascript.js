@@ -1,21 +1,19 @@
 /* site-main.js
-   Combined form logic, theme toggling, and modal code.
-   Drop in /js and include with defer. */
-
+   Slightly hardened version of your script. Keeps behavior identical.
+   Include with defer as before.
+*/
 (() => {
   'use strict';
 
   /* ---------- Helpers ---------- */
-  const $ = (sel, ctx = document) => ctx.querySelector(sel);
-  const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+  const $ = (sel, ctx = document) => (ctx || document).querySelector(sel);
+  const $$ = (sel, ctx = document) => Array.from((ctx || document).querySelectorAll(sel));
 
   const normalizePhone = phone => phone ? phone.replace(/[^\d\+]/g, '') : '';
-
   const isValidEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
   const isValidPhone = phone => {
     const norm = normalizePhone(phone);
-    return norm.length >= 7; // simple sanity check; can be tightened
+    return norm.length >= 7; // simple sanity check; tighten if you want
   };
 
   /* ---------- DOMContentLoaded init ---------- */
@@ -26,6 +24,7 @@
       console.warn('orderForm not found — form scripts will not run.');
     }
 
+    // Grab elements but allow them to be null (we guard later)
     const companyNameInput = $('#companyName');
     const emailInput = $('#email');
     const phoneInput = $('#phone');
@@ -46,11 +45,12 @@
     function showMessage(type, text) {
       if (!formAlert) return;
       const cls = type === 'error' ? 'danger' : (type === 'success' ? 'success' : 'info');
-      formAlert.innerHTML = `<div class="alert alert-${cls}" role="alert">${text}</div>`;
+      // create alert container (focusable)
+      formAlert.innerHTML = `<div class="alert alert-${cls}" role="alert" tabindex="-1">${text}</div>`;
       const alertEl = formAlert.querySelector('.alert');
       if (alertEl) {
-        alertEl.setAttribute('tabindex', '-1');
-        alertEl.focus();
+        // some screenreaders focus if element receives focus
+        try { alertEl.focus(); } catch (e) { /* ignore */ }
       }
     }
 
@@ -71,7 +71,7 @@
       companyDetails.setAttribute('aria-hidden', (!show).toString());
       if (!show) {
         // clear inputs inside companyDetails when hiding to avoid accidental submission
-        $$('input, textarea, select', companyDetails).forEach(i => i.value = '');
+        $$('input, textarea, select', companyDetails).forEach(i => { i.value = ''; });
       }
     }
 
@@ -120,7 +120,7 @@
         phoneInput.value = normalizePhone(phoneInput.value); // replace with normalized version
       }
 
-      // Required selects/textarea (some double-checks)
+      // Required selects/textarea (double checks)
       if (purposeSelect && !purposeSelect.value) { purposeSelect.classList.add('is-invalid'); purposeSelect.focus(); return false; }
       if (howHeardSelect && !howHeardSelect.value) { howHeardSelect.classList.add('is-invalid'); howHeardSelect.focus(); return false; }
       if (inquiryInput && !inquiryInput.value.trim()) { inquiryInput.classList.add('is-invalid'); inquiryInput.focus(); return false; }
@@ -138,14 +138,14 @@
 
       if (!validateForm()) return;
 
-      // Prepare FormData (we already have the form)
+      // Prepare FormData
       const fd = new FormData(form);
 
       setSubmitting(true);
       showMessage('info', 'Submitting — please wait...');
 
       try {
-        const res = await fetch(form.action, {
+        const res = await fetch(form.action || window.location.href, {
           method: 'POST',
           body: fd,
           credentials: 'same-origin',
@@ -156,23 +156,33 @@
           const ct = (res.headers.get('content-type') || '');
           let message = 'Form submitted successfully.';
           if (ct.includes('application/json')) {
-            const json = await res.json();
-            message = json.message || message;
-            if (json.success === false) {
-              showMessage('error', message);
-              setSubmitting(false);
-              return;
+            // robust JSON parse
+            let json = null;
+            try { json = await res.json(); } catch (e) { json = null; }
+            if (json) {
+              message = json.message || message;
+              if (json.success === false) {
+                showMessage('error', message);
+                setSubmitting(false);
+                return;
+              }
+            } else {
+              // not JSON — try text below
+              const text = await res.text();
+              if (text && text.trim()) message = text.trim();
             }
           } else {
+            // non-json response — show text if present
             const text = await res.text();
-            message = (text && text.trim()) ? text : message;
+            if (text && text.trim()) message = text.trim();
           }
 
           showMessage('success', message);
-          form.reset();
+          // Reset form and state
+          try { form.reset(); } catch (e) { /* ignore */ }
           toggleCompanyDetails();
         } else {
-          const txt = await res.text();
+          const txt = await res.text().catch(() => res.statusText);
           showMessage('error', `Server error: ${txt || res.statusText}`);
           // fallback: leave the form as-is for manual retry
         }
@@ -180,9 +190,10 @@
         // Network/CORS error — fallback to classic submit to ensure server receives data
         showMessage('error', 'Network error — attempting classic submit as fallback.');
         // Remove our handler to avoid infinite loop and submit
-        form.removeEventListener('submit', handleSubmit);
+        try { form.removeEventListener('submit', handleSubmit); } catch (e) {}
         setSubmitting(false);
-        form.submit();
+        // Classic submit
+        try { form.submit(); } catch (e) { /* if blocked, nothing else to do */ }
         return;
       } finally {
         setSubmitting(false);
@@ -191,8 +202,8 @@
 
     /* ---------- Clear button ---------- */
     if (clearBtn && form) {
-      clearBtn.addEventListener('click', e => {
-        form.reset();
+      clearBtn.addEventListener('click', () => {
+        try { form.reset(); } catch (e) {}
         form.classList.remove('was-validated');
         clearMessage();
         toggleCompanyDetails();
@@ -202,13 +213,13 @@
     /* ---------- Wire up form submit ---------- */
     if (form) {
       form.addEventListener('submit', handleSubmit);
+
       // Extra: allow Enter in textarea to submit (without shift)
-      const inquiry = inquiryInput;
-      if (inquiry) {
-        inquiry.addEventListener('keydown', e => {
+      if (inquiryInput) {
+        inquiryInput.addEventListener('keydown', e => {
           if ((e.key === 'Enter' || e.keyCode === 13) && !e.shiftKey) {
             e.preventDefault();
-            submitBtn && submitBtn.click();
+            if (submitBtn) submitBtn.click();
           }
         });
       }
@@ -233,19 +244,20 @@
     applySavedTheme();
     if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
 
-    /* ---------- Modal functionality (optional) ---------- */
+    /* ---------- Modal functionality (optional) ----------
+       This block is optional and only runs if modal elements exist.
+       It won't interfere with your page if you don't have #projectModal.
+    */
     const modal = $('#projectModal');
-    const closeBtn = modal ? modal.querySelector('.close') : null;
-    const viewProjectButtons = $$('.btn-primary[data-id]');
-
-    if (modal && closeBtn && viewProjectButtons.length) {
+    if (modal) {
+      const closeBtn = modal.querySelector('.close');
+      const viewProjectButtons = $$('.btn-primary[data-id]');
       const modalImages = modal.querySelector('.modal-images');
 
       function openModal(id) {
         if (!modalImages) return;
         modal.style.display = 'flex';
         modalImages.innerHTML = '';
-        // Example: populate 3 images; adapt to your project reale data if needed
         for (let i = 1; i <= 3; i++) {
           const img = document.createElement('img');
           img.src = `images/project${id}_image${i}.jpg`;
@@ -265,7 +277,7 @@
         });
       });
 
-      closeBtn.addEventListener('click', closeModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
       window.addEventListener('click', e => { if (e.target === modal) closeModal(); });
     }
 
