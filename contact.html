@@ -9,8 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Font Awesome Kit (kept single source) -->
     <script src="https://kit.fontawesome.com/6735e83b36.js" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
@@ -58,8 +57,6 @@
                 <a class="navbar-brand" href="index.html">
                     <img src="images/Fibrion Logo _ 200 x 50px.png" alt="Fibrion Textiles Logo">
                 </a>
-
-                
 
                 <!-- Offcanvas Toggler (right) -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -165,7 +162,7 @@
 
 <section class="contact-form py-5" id="contact">
   <div class="container">
-    <h2 class="text-center mb-4">Customer Registration Form</h2>
+    <h2 id="contactHeading" class="text-center mb-4">Customer Registration Form</h2>
 
     <!-- Form wrapper -->
     <div class="card p-4 shadow-sm" role="region" aria-labelledby="contactHeading">
@@ -348,9 +345,6 @@
   }
 </style>
 
-
-
-
     <!-- Contact Information -->
     <section id="contact-info" class="py-5">
         <div class="container">
@@ -385,12 +379,21 @@
 
     <!-- Map Section -->
     <section id="map" class="py-5">
-        <div class="container">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2818.267057439043!2d28.0398!3d-26.1063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95b0bcd6f799cb%3A0x6b13c72e43185edb!2sSandton%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1633079000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
-            </div>                       
+      <div class="container">
+        <!-- center and limit width so map is smaller on large screens -->
+        <div class="mx-auto" style="max-width:400px;">
+          <div class="ratio ratio-4x3">
+            <iframe
+              title="Fibrion Textiles - 16 Village Street, Randfontein, Gauteng"
+              src="https://www.google.com/maps?q=16+Village+Street,+Randfontein,+Gauteng&output=embed"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
+      </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="bg-dark text-light text-center py-4">
@@ -447,7 +450,8 @@
             }
     
             // Add event listener to the theme toggle button
-            document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+            var toggle = document.getElementById('theme-toggle');
+            if (toggle) toggle.addEventListener('click', toggleTheme);
         });
     </script>
 </body>
