@@ -147,56 +147,100 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Industries We Serve -->
     <section id="services" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">Industries We Serve</h2>
             <p class="card-text text-center mb-5">
-                Serving the mining, agriculture, construction, and geotextile industries, 
-                Fibrion engineers high-performance technical textiles designed for strength, safety, and efficiency. 
-                Our versatile manufacturing capabilities allow us to develop both industry-standard and custom fabrics at scale. 
-                From industrial reinforcement to advanced protective materials, we deliver consistent, high-quality results worldwide.
+            Serving the mining, agriculture, construction, and geotextile industries,
+            Fibrion engineers high-performance technical textiles designed for strength, safety, and efficiency.
+            Our versatile manufacturing capabilities allow us to develop both industry-standard and custom fabrics at scale.
+            From industrial reinforcement to advanced protective materials, we deliver consistent, high-quality results worldwide.
             </p>
 
-            <div class="row">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
                 <!-- Mining -->
-                <div class="col-md-3 mb-4">
-                    <div class="feature-box h-100 p-3 border rounded shadow-sm bg-gradient bg-opacity-10 text-center">
-                        <img src="images/Industries/mining.png" class="card-img-top mb-3" alt="Mining Industry">
+                <div class="col">
+                    <div class="card h-100 feature-box text-center shadow-sm">
+                    <img src="images/Industries/mining.png" class="card-img-top mb-3" alt="Mining Industry">
+                    <div class="card-body">
                         <h5 class="card-title">Mining</h5>
                         <p class="card-text">Durable fabrics for reinforcement, safety, and demanding mining operations.</p>
+                        <button type="button" class="btn btn-light mt-2" data-bs-toggle="modal" data-bs-target="#pdfModalMining">View PDF</button>
+                    </div>
                     </div>
                 </div>
 
                 <!-- Agriculture -->
-                <div class="col-md-3 mb-4">
-                    <div class="feature-box h-100 p-3 border rounded shadow-sm bg-gradient bg-opacity-10 text-center">
-                        <img src="images/Industries/agriculture.png" class="card-img-top mb-3" alt="Agriculture Industry">
+                <div class="col">
+                    <div class="card h-100 feature-box text-center shadow-sm">
+                    <img src="images/Industries/agriculture.png" class="card-img-top mb-3" alt="Agriculture Industry">
+                    <div class="card-body">
                         <h5 class="card-title">Agriculture</h5>
                         <p class="card-text">Protective and moisture-resistant textiles for sustainable farming applications.</p>
+                        <button type="button" class="btn btn-light mt-2" data-bs-toggle="modal" data-bs-target="#pdfModalAgriculture">View PDF</button>
+                    </div>
                     </div>
                 </div>
 
                 <!-- Construction -->
-                <div class="col-md-3 mb-4">
-                    <div class="feature-box h-100 p-3 border rounded shadow-sm bg-gradient bg-opacity-10 text-center">
-                        <img src="images/Industries/construction.png" class="card-img-top mb-3" alt="Construction Industry">
+                <div class="col">
+                    <div class="card h-100 feature-box text-center shadow-sm">
+                    <img src="images/Industries/construction.png" class="card-img-top mb-3" alt="Construction Industry">
+                    <div class="card-body">
                         <h5 class="card-title">Construction</h5>
                         <p class="card-text">Reinforcement and safety fabrics for building, roofing, and infrastructure projects.</p>
+                        <button type="button" class="btn btn-light mt-2" data-bs-toggle="modal" data-bs-target="#pdfModalConstruction">View PDF</button>
+                    </div>
                     </div>
                 </div>
 
                 <!-- Geotextiles -->
-                <div class="col-md-3 mb-4">
-                    <div class="feature-box h-100 p-3 border rounded shadow-sm bg-gradient bg-opacity-10 text-center">
-                        <img src="images/Industries/geotextiles.png" class="card-img-top mb-3" alt="Geotextiles Industry">
+                <div class="col">
+                    <div class="card h-100 feature-box text-center shadow-sm">
+                    <img src="images/Industries/geotextiles.png" class="card-img-top mb-3" alt="Geotextiles Industry">
+                    <div class="card-body">
                         <h5 class="card-title">Geotextiles</h5>
                         <p class="card-text">Heavy-duty geotextiles for soil stabilization, erosion control, and infrastructure.</p>
+                        <button type="button" class="btn btn-light mt-2" data-bs-toggle="modal" data-bs-target="#pdfModalGeotextiles">View PDF</button>
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- ================= PDF Modals (same style as Gallery) ================= -->
+
+    <!-- Mining PDF Modal -->
+    <div class="modal fade" id="pdfModalMining" tabindex="-1" aria-labelledby="pdfModalLabelMining" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="pdfModalLabelMining">Mining Industry Overview</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body text-center">
+            <iframe 
+            src="images/Industries/Fibrion Textiles Mining.pdf"
+            width="100%"
+            height="600px"
+            style="border:none; border-radius:8px;">
+            </iframe>
+        </div>
+
+        <div class="modal-footer d-flex justify-content-between align-items-center">
+            <a href="images/Industries/Fibrion Textiles Mining.pdf" download class="btn btn-primary">Download PDF</a>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Duplicate this modal for Agriculture, Construction, Geotextiles with unique IDs and PDF filenames -->
+
 
     <!-- Features Section -->
     <section id="features" class="py-5">
@@ -326,7 +370,7 @@
                 <div class="col-md-6 mb-3 mb-md-0">
                     <p>Fibrion Textiles</p>
                     <p>
-                        <a href="mailto:admin@fibrion.com" class="text-light">admin@fibrion.com</a>
+                        <a href="mailto:admin@fibriontextiles.com" class="text-light">admin@fibriontextiles.com</a>
                     </p>
                 </div>
 
